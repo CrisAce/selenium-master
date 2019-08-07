@@ -9,7 +9,7 @@ public class LogInTest {
 	
 	@Test
 	public void loginTest(){
-		System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://the-internet.herokuapp.com/login");
 		System.out.println("Page is opened");

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10372" started-at="2019-08-07T09:11:07Z" finished-at="2019-08-07T09:11:18Z">
+  <suite name="Default suite" duration-ms="9061" started-at="2019-08-07T16:52:56 EEST" finished-at="2019-08-07T16:53:05 EEST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10372" started-at="2019-08-07T09:11:07Z" finished-at="2019-08-07T09:11:18Z">
+    <test name="Default test" duration-ms="9061" started-at="2019-08-07T16:52:56 EEST" finished-at="2019-08-07T16:53:05 EEST">
       <class name="com.practice.selenium.com.LogInTest">
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.practice.selenium.com.LogInTest@7907ec20]" name="loginTest" duration-ms="10338" started-at="2019-08-07T12:11:07Z" finished-at="2019-08-07T12:11:18Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.practice.selenium.com.LogInTest@731a74c]" name="loginTest" duration-ms="9003" started-at="2019-08-07T16:52:56 EEST" finished-at="2019-08-07T16:53:05 EEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->

@@ -16,9 +16,12 @@ public class BaseTest {
 	public WebDriver initializeDriver() throws IOException{
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("/Users/cristianion/Documents/workspace/E2ESeleniumFramework/src/main/resources/data.properties");
+		FileInputStream windowsFis = new FileInputStream("C:\\Users\\CRISTIANION\\master-selenium\\selenium-master\\Configs\\Configuation.properties");
 		prop.load(fis);
+		prop.load(windowsFis);
 		
 		String browserName = prop.getProperty("browser");
+		String path = prop
 		
 		if(browserName.equals("Chrome")){
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
