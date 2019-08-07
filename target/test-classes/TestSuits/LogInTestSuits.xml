@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="TestSuits" verbose="1" >
+  <test name="LogInTest.java" >
+    <classes>
+       <class name="com.practice.selenium.com.LogInTest" />
+    </classes>
+  </test>
+</suite>
