@@ -5,14 +5,13 @@
 	<artifactId>E2ESeleniumFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<suiteXmlFile>src/test/resources/TestSuits/LogInTestSuits.xml</suiteXmlFile>
+		<suiteXmlFile>src/test/resources/TestSuits/LogInTestSuitsVariousBrowsers.xml</suiteXmlFile>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.0.0-beta7</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

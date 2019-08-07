@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="LoIinTestSuitsVariousBrowsers"   verbose="1"" >
+  <test name="LogInTest -CH" >
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+       <class name="com.practice.selenium.com.LogInTest" />
+    </classes>
+  </test>
+  <test name="LogInTest -FF" >
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+       <class name="com.practice.selenium.com.LogInTest" />
+    </classes>
+  </test>
+  <test name="LogInTest -Safari" >
+  <parameter name="browser" value="safari"></parameter>
+    <classes>
+       <class name="com.practice.selenium.com.LogInTest" />
+    </classes>
+  </test>
+</suite>

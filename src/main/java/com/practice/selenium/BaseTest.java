@@ -7,36 +7,27 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class BaseTest {
 	// initialize WebDriver only once
-	public static WebDriver driver;
-	public Properties prop;
-
-	public WebDriver initializeDriver() throws IOException{
-		prop = new Properties();
-		FileInputStream fis = new FileInputStream("/Users/cristianion/Documents/workspace/E2ESeleniumFramework/src/main/resources/data.properties");
-		FileInputStream windowsFis = new FileInputStream("C:\\Users\\CRISTIANION\\master-selenium\\selenium-master\\Configs\\Configuation.properties");
-		prop.load(fis);
-		prop.load(windowsFis);
+	protected  WebDriver driver;
+	
+	@BeforeMethod(alwaysRun=true)
+	@Parameters({"browser"})
+	protected void setUp(@Optional("chrome")String browser){
+		BrowserDriverFactory factory = new BrowserDriverFactory(browser);
+		driver = factory.createDriver();
 		
-		String browserName = prop.getProperty("browser");
-		String path = prop
-		
-		if(browserName.equals("Chrome")){
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-			driver = new ChromeDriver();
-		}
-		
-		else if (browserName.equals("FireFox")) {
-			System.setProperty("webdriver.firefox.driver", "src/main/resources/geckodriver");
-			
-		}
-		
-		
-		
-		return driver;
-		
+		//maximize browser window
+		driver.manage().window().maximize();
 	}
-
+	@AfterMethod(alwaysRun=true)
+	protected void thearDown(){
+		System.out.println("[Closing driver]");
+		driver.quit();
+	}
 }
